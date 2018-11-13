@@ -28,8 +28,11 @@ for x in range(i1, i2+1):
     print("f(",x,") =", y)
 print(list2)
 
+list3 = []
 len = i2-i1
-i = randint(1,len)
-der = (list2[i]-list[i])/h
-print("the slope is", der)
+for i in range(1,len+1):
+    der = (list2[i]-list[i])/h
+    list3.append(der)
+    print("the slope is", der)
+print(list3)
 
