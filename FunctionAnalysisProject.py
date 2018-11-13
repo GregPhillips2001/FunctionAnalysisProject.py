@@ -12,8 +12,8 @@ i1 = int(input(""))
 print("Enter the left point of the interval: ")
 i2 = int(input(""))
 
+list = []
 for x in range(i1, i2+1):
-    list = []
     y = eval(f)
     list.append(y)
     print("f(",x,") =", y)
