@@ -4,11 +4,17 @@
 
 from math import *
 
-print("Enter a function: ")
-function = input("")
+print("Enter a function (in terms of x): ")
+f = input("")
 
-"""print("Enter a closed interval: ")
-interval = input("")"""
+print("Enter the left point of the interval: ")
+i1 = int(input(""))
+print("Enter the left point of the interval: ")
+i2 = int(input(""))
 
-ans = eval(function)
-print(ans)
+for x in range(i1, i2+1):
+    y = eval(f)
+    print("f(",x,") =", y)
+    
+    
+
