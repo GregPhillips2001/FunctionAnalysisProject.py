@@ -30,7 +30,7 @@ print(list2)
 
 list3 = []
 len = i2-i1
-for i in range(1,len+1):
+for i in range(0,len+1):
     der = (list2[i]-list[i])/h
     list3.append(der)
     print("the slope is", der)
