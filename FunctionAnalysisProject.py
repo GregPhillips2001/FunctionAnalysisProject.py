@@ -24,7 +24,7 @@ for x in range(i1, i2+1):
     x += 0.001
     y = eval(f)
     list2.append(y)
-    print("f(",x,"+ h) =", y)
+    print("f(",x,") =", y)
 print(list2)
     
 
