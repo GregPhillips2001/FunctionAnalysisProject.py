@@ -14,14 +14,15 @@ print("Enter the right point of the interval: ")
 i2 = int(input(""))
 
 list = []
-for x in range(i1, i2+1):
+for x in range(i1,i2+1):
     y = eval(f)
     list.append(y)
     print("f(",x,") =", y)
 print(list)
+
 h = .001   
 list2 = []
-for x in range(i1, i2+1):
+for x in range(i1,i2+1):
     x += h
     y = eval(f)
     list2.append(y)
@@ -35,4 +36,16 @@ for i in range(0,len+1):
     list3.append(der)
     print("the slope is", der)
 print(list3)
+
+list4 = []
+for i in range(0,len+1):
+    y = list3[i]
+    if y > 0:
+        list4.append("+")
+    elif y < 0:
+        list4.append("-")
+    else:
+        list4.append("0")
+print(list4)
+
 
