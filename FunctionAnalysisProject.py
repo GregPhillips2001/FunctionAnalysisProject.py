@@ -38,14 +38,24 @@ for i in range(0,len+1):
 print(list3)
 
 list4 = []
+list5 = []
+list6 = []
+list7 = []
+x= i1
 for i in range(0,len+1):
     y = list3[i]
+    x += 1
     if y > 0:
         list4.append("+")
+        list5.append(x)
     elif y < 0:
         list4.append("-")
+        list6.append(x)
     else:
         list4.append("0")
+        list7.append(x)
 print(list4)
-
+print("the function is increasing at the x values", list5)
+print("the function is decreasing at the x values", list6)
+print("the function has critical points at the x values", list7)
 
