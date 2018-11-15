@@ -13,8 +13,13 @@ i1 = int(input(""))
 print("Enter the right point of the interval: ")
 i2 = int(input(""))
 
+x= i1
+len = 100
+delx = (i2 - i1)/len
+
 list = []
-for x in range(i1,i2+1):
+for i in range(0,len+1):
+    x += delx
     y = eval(f)
     list.append(y)
     print("f(",x,") =", y)
@@ -22,15 +27,15 @@ print(list)
 
 h = .001   
 list2 = []
-for x in range(i1,i2+1):
-    x += h
+for i in range(0,len+1):
+    x += delx + h
     y = eval(f)
     list2.append(y)
     print("f(",x,") =", y)
 print(list2)
 
 list3 = []
-len = i2-i1
+#len = i2-i1
 for i in range(0,len+1):
     der = (list2[i]-list[i])/h
     list3.append(der)
@@ -42,9 +47,10 @@ list5 = []
 list6 = []
 list7 = []
 x= i1
+delx = (i2 - i1)/len
 for i in range(0,len+1):
     y = list3[i]
-    x += 1
+    x += delx
     if y > 0:
         list4.append("+")
         list5.append(x)
@@ -58,4 +64,5 @@ print(list4)
 print("the function is increasing at the x values", list5)
 print("the function is decreasing at the x values", list6)
 print("the function has critical points at the x values", list7)
+
 
