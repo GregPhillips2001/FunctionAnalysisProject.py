@@ -19,19 +19,21 @@ delx = (i2 - i1)/len
 
 list = []
 for i in range(0,len+1):
-    x += delx
     y = eval(f)
     list.append(y)
     print("f(",x,") =", y)
+    x += delx
 print(list)
 
 h = .001   
 list2 = []
+delxx = delx + h
+x = i1 + h 
 for i in range(0,len+1):
-    x += delx + h
     y = eval(f)
     list2.append(y)
     print("f(",x,") =", y)
+    x += delxx
 print(list2)
 
 list3 = []
