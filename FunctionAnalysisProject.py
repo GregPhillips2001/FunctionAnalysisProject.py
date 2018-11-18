@@ -14,11 +14,11 @@ print("Enter the right point of the interval: ")
 i2 = int(input(""))
 
 x= i1
-len = 100
-delx = (i2 - i1)/len
+len1 = 100
+delx = (i2 - i1)/len1
 
 list = []
-for i in range(0,len+1):
+for i in range(0,len1+1):
     y = eval(f)
     list.append(y)
     #print("f(",x,") =", y)
@@ -29,7 +29,7 @@ h = .001
 list2 = []
 delxx = delx + h
 x = i1 + h 
-for i in range(0,len+1):
+for i in range(0,len1+1):
     y = eval(f)
     list2.append(y)
     #print("f(",x,") =", y)
@@ -38,50 +38,44 @@ for i in range(0,len+1):
 
 list3 = []
 #len = i2-i1
-for i in range(0,len+1):
+for i in range(0,len1+1):
     der = (list2[i]-list[i])/h
     list3.append(der)
     #print("the slope is", der)
 #print(list3)
 
+
+x= i1
+delx = (i2 - i1)/len1
+
 list4 = []
 list5 = []
-list6 = []
-list7 = []
-x= i1
-delx = (i2 - i1)/len
-for i in range(0,len+1):
-    y = list3[i]
-    x += delx
-    if y > 0:
-        list4.append("+")
-        list5.append(x)
-    elif y < 0:
-        list4.append("-")
-        list6.append(x)
-    else:
-        list4.append("0")
-        list7.append(x)
-#print(list4)
-#print("the function is increasing at the x values", list5)
-#print("the function is decreasing at the x values", list6)
-#print("the function has critical points at the x values", list7)
-
-#for i in range(0
-list8 = []
 x = i1
-for i in range(0,len):
+for i in range(0,len1):
     x += delx
     if list3[i] < 0 and list3[i+1] > 0:
         min = (2*x+delx)/2
-        list8.append(min)
-        print("There is a minimum around x = ", round(min,2))
+        list4.append(min)
+        list5.append(-1)
+        print("There is a minimum at approximately x =", round(min,2))
     elif list3[i] > 0 and list3[i+1] < 0:
         max = (2*x+delx)/2
-        list8.append(max)
-        print("There is a maximum around x = ", round(max,2))
+        list4.append(max)
+        list5.append(1)
+        print("There is a maximum at approximately x =", round(max,2))
 
-for i in range(0,len2+1):
+l = len(list4)
+for i in range(0,l-1):
+    if list5[i] < 0:
+        print("the function is increasing from x =", round(list4[i],2), "to x =", round(list4[i+1],2))
+    elif list5[i] > 0:
+        print("the function is decreasing from x =", round(list4[i],2), "to x =", round(list4[i+1],2))
+
+list6 = []
+for i in range(0, len1+1):
+    der2 = (list3[i]-list3[i+1])/h
+    list6.append(der2)
+print(list6)
     
 
 
