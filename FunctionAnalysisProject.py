@@ -21,9 +21,9 @@ list = []
 for i in range(0,len+1):
     y = eval(f)
     list.append(y)
-    print("f(",x,") =", y)
+    #print("f(",x,") =", y)
     x += delx
-print(list)
+#print(list)
 
 h = .001   
 list2 = []
@@ -32,17 +32,17 @@ x = i1 + h
 for i in range(0,len+1):
     y = eval(f)
     list2.append(y)
-    print("f(",x,") =", y)
+    #print("f(",x,") =", y)
     x += delxx
-print(list2)
+#print(list2)
 
 list3 = []
 #len = i2-i1
 for i in range(0,len+1):
     der = (list2[i]-list[i])/h
     list3.append(der)
-    print("the slope is", der)
-print(list3)
+    #print("the slope is", der)
+#print(list3)
 
 list4 = []
 list5 = []
@@ -62,9 +62,32 @@ for i in range(0,len+1):
     else:
         list4.append("0")
         list7.append(x)
-print(list4)
-print("the function is increasing at the x values", list5)
-print("the function is decreasing at the x values", list6)
-print("the function has critical points at the x values", list7)
+#print(list4)
+#print("the function is increasing at the x values", list5)
+#print("the function is decreasing at the x values", list6)
+#print("the function has critical points at the x values", list7)
+
+#for i in range(0
+list8 = []
+x = i1
+num = len(list3)
+for i in range(0,num+1):
+    x += delx
+    if list3[i] < 0 and list3[i+1] > 0:
+        min = (2*x+delx)/2
+        list8.append(min)
+        print("There is a minimum around x = ", min)
+        
+x = i1
+for i in range(0,num+1):
+    x += delx
+    if list3[i] > 0 and list3[i+1] < 0:
+        max = (2*x+delx)/2
+        list8.append(max)
+        print("There is a minimum around x = ", max)
+
+len2 = list8.amount
+#for i in range(0,len2+1):
+    
 
 
