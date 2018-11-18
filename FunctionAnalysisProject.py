@@ -76,9 +76,10 @@ for i in range(0, len1):
     der2 = (list3[i]-list3[i+1])/h
     list6.append(der2)
 
+l2 = len(list6)
 list7 = []
 list8 = []
-for i in range(0,len1):
+for i in range(0,l2-1):
     x += delx
     if list6[i] < 0 and list6[i+1] > 0:
         inf = (2*x+delx)/2
