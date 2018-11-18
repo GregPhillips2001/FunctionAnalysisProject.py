@@ -70,8 +70,7 @@ for i in range(0,len+1):
 #for i in range(0
 list8 = []
 x = i1
-num = len(list3)
-for i in range(0,num+1):
+for i in range(0,len):
     x += delx
     if list3[i] < 0 and list3[i+1] > 0:
         min = (2*x+delx)/2
@@ -79,7 +78,7 @@ for i in range(0,num+1):
         print("There is a minimum around x = ", min)
         
 x = i1
-for i in range(0,num+1):
+for i in range(0,len):
     x += delx
     if list3[i] > 0 and list3[i+1] < 0:
         max = (2*x+delx)/2
