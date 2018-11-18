@@ -5,9 +5,11 @@
 from math import *
 from random import randint
 
+#here the user is entering the function which will be evaluated
 print("Enter a function (in terms of x): ")
 f = input("")
 
+#user is entering the interval in which the function is evaluated
 print("Enter the left point of the interval: ")
 i1 = int(input(""))
 print("Enter the right point of the interval: ")
@@ -21,9 +23,7 @@ list = []
 for i in range(0,len1+1):
     y = eval(f)
     list.append(y)
-    #print("f(",x,") =", y)
     x += delx
-#print(list)
 
 h = .001   
 list2 = []
@@ -32,24 +32,29 @@ x = i1 + h
 for i in range(0,len1+1):
     y = eval(f)
     list2.append(y)
-    #print("f(",x,") =", y)
     x += delxx
-#print(list2)
 
 list3 = []
-#len = i2-i1
 for i in range(0,len1+1):
     der = (list2[i]-list[i])/h
     list3.append(der)
-    #print("the slope is", der)
-#print(list3)
-
 
 x= i1
 delx = (i2 - i1)/len1
 
 list4 = []
 list5 = []
+
+if list3[0]>0:
+    print(x1,"is a minimum")
+else:
+    print(x1,"is a maximum")
+    
+if list3[len1]>0:
+    print(x2,"is a minimum")
+else:
+    print(x2,"is a maximum")
+
 x = i1
 for i in range(0,len1):
     x += delx
