@@ -101,7 +101,7 @@ if l3 > 0:
         elif list8[i] > 0:
             print("The function is concave down from x =", round(list7[i],2), "to x =", round(list7[i+1],2))
 elif:
-    print("There are no points of inflection)
+    print("There are no points of inflection")
 elif list6[1]>0:
     print("The function is always concave up")
 else:
