@@ -75,7 +75,21 @@ list6 = []
 for i in range(0, len1):
     der2 = (list3[i]-list3[i+1])/h
     list6.append(der2)
-print(list6)
+
+list7 = []
+list8 = []
+for i in range(0,len1):
+    x += delx
+    if list6[i] < 0 and list6[i+1] > 0:
+        inf = (2*x+delx)/2
+        list7.append(min)
+        list8.append(-1)
+        print("There is a point of inflection at approximately x =", round(min,2))
+    elif list6[i] > 0 and list6[i+1] < 0:
+        max = (2*x+delx)/2
+        list7.append(max)
+        list8.append(1)
+        print("There is a point of inflection at approximately x =", round(max,2))
     
 
 
