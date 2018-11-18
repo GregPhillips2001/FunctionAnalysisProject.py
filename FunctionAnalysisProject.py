@@ -75,18 +75,13 @@ for i in range(0,len):
     if list3[i] < 0 and list3[i+1] > 0:
         min = (2*x+delx)/2
         list8.append(min)
-        print("There is a minimum around x = ", min)
-        
-x = i1
-for i in range(0,len):
-    x += delx
-    if list3[i] > 0 and list3[i+1] < 0:
+        print("There is a minimum around x = ", round(min,2))
+    elif list3[i] > 0 and list3[i+1] < 0:
         max = (2*x+delx)/2
         list8.append(max)
-        print("There is a minimum around x = ", max)
+        print("There is a maximum around x = ", round(max,2))
 
-len2 = list8.amount
-#for i in range(0,len2+1):
+for i in range(0,len2+1):
     
 
 
