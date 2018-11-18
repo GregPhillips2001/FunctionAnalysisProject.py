@@ -72,7 +72,7 @@ for i in range(0,l-1):
         print("the function is decreasing from x =", round(list4[i],2), "to x =", round(list4[i+1],2))
 
 list6 = []
-for i in range(0, len1+1):
+for i in range(0, len1):
     der2 = (list3[i]-list3[i+1])/h
     list6.append(der2)
 print(list6)
