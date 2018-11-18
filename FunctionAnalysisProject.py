@@ -46,14 +46,14 @@ list4 = []
 list5 = []
 
 if list3[0]>0:
-    print(x1,"is a minimum")
+    print(i1,"is a minimum")
 else:
-    print(x1,"is a maximum")
+    print(i1,"is a maximum")
     
 if list3[len1]>0:
-    print(x2,"is a minimum")
+    print(i2,"is a minimum")
 else:
-    print(x2,"is a maximum")
+    print(i2,"is a maximum")
 
 x = i1
 for i in range(0,len1):
