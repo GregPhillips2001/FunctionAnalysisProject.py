@@ -79,6 +79,7 @@ for i in range(0, len1):
 l2 = len(list6)
 list7 = []
 list8 = []
+x = i1
 for i in range(0,l2-1):
     x += delx
     if list6[i] < 0 and list6[i+1] > 0:
@@ -93,10 +94,17 @@ for i in range(0,l2-1):
         print("There is a point of inflection at approximately x =", round(inf,2))
 
 l3 = len(list7)
-for i in range(0,l-1):
-    if list8[i] < 0:
-        print("the function is concave up from x =", round(list7[i],2), "to x =", round(list7[i+1],2))
-    elif list8[i] > 0:
-        print("the function is concave down from x =", round(list7[i],2), "to x =", round(list7[i+1],2))
+if l3 > 0:
+    for i in range(0,l-1):
+        if list8[i] < 0:
+            print("The function is concave up from x =", round(list7[i],2), "to x =", round(list7[i+1],2))
+        elif list8[i] > 0:
+            print("The function is concave down from x =", round(list7[i],2), "to x =", round(list7[i+1],2))
+elif:
+    print("There are no points of inflection)
+elif list6[1]>0:
+    print("The function is always concave up")
+else:
+    print("The function is always concave down")
 
 
