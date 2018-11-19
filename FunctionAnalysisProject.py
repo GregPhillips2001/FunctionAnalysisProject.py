@@ -53,14 +53,6 @@ else:
     print("x =", i1,"is a maximum")
     list4.append(i1)
     list5.append(1)
-if list3[len1]>0:
-    print("x =", i2,"is a maximum")
-    list4.append(i2)
-    list5.append(1)
-else:
-    print("x =", i2,"is a minimum")
-    list4.append(i2)
-    list5.append(-1)
 
 x = i1
 for i in range(0,len1):
@@ -75,6 +67,15 @@ for i in range(0,len1):
         list4.append(max)
         list5.append(1)
         print("There is a maximum at approximately x =", round(max,2))
+
+if list3[len1]>0:
+    print("x =", i2,"is a maximum")
+    list4.append(i2)
+    list5.append(1)
+else:
+    print("x =", i2,"is a minimum")
+    list4.append(i2)
+    list5.append(-1)
 
 l = len(list4)
 for i in range(0,l-1):
