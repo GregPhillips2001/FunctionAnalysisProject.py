@@ -47,13 +47,16 @@ list5 = []
 
 if list3[0]>0:
     print("x =", i1,"is a minimum")
+    list5.append(-1)
 else:
     print("x =", i1,"is a maximum")
-    
+    list5.append(1)
 if list3[len1]>0:
     print("x =", i2,"is a maximum")
+    list5.append(1)
 else:
     print("x =", i2,"is a minimum")
+    list5.append(-1)
 
 x = i1
 for i in range(0,len1):
