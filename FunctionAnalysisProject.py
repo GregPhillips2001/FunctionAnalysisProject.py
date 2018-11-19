@@ -50,10 +50,10 @@ if list3[0]>0:
 else:
     print(i1,"is a maximum")
     
-if list3[len1+1]>0:
-    print("x =", i2,"is a minimum")
-else:
+if list3[len1]>0:
     print("x =", i2,"is a maximum")
+else:
+    print("x =", i2,"is a minimum")
 
 x = i1
 for i in range(0,len1):
