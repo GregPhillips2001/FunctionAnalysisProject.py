@@ -84,6 +84,7 @@ for i in range(0,l-1):
     elif list5[i] > 0:
         print("the function is decreasing from x =", round(list4[i],2), "to x =", round(list4[i+1],2))
 
+#MISTAKE IN SECOND DERIVATIVE
 list6 = []
 for i in range(0, len1):
     der2 = (list3[i]-list3[i+1])/h
