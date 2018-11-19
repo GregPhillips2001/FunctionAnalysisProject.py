@@ -72,7 +72,7 @@ for i in range(0,len1):
         list5.append(1)
         print("There is a maximum at approximately x =", round(max,2))
 
-l = len(list4)
+l = len(list5)
 for i in range(0,l-1):
     if list5[i] < 0:
         print("the function is increasing from x =", round(list4[i],2), "to x =", round(list4[i+1],2))
